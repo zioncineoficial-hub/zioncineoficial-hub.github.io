@@ -434,6 +434,7 @@ body.zc-booking-open{overflow:hidden}
  </div>
 </section>
 <!-- FIM SECAO EXPERIENCIAS ZION V12 -->
+<!-- ZION CINE V16 - fluxo simplificado: solicitação manual pelo WhatsApp, sem serviços externos -->
 <!-- JANELA DE PRÉ-AGENDAMENTO ZION -->
 <div class="zc-booking-backdrop" id="zc-booking-modal" role="dialog" aria-modal="true" aria-labelledby="zc-booking-title" hidden>
  <div class="zc-booking-panel" role="document">
@@ -448,14 +449,14 @@ body.zc-booking-open{overflow:hidden}
   </div>
   <p class="zc-booking-selected" id="zc-booking-selected" aria-live="polite">Selecione um dia em verde.</p>
   <div class="zc-booking-next" id="zc-booking-next" hidden>
-   <p class="zc-booking-warning">Os dias verdes são compatíveis com a escala da Zion, <strong>não são reservas confirmadas</strong>. Envie a data pelo WhatsApp e aguarde a confirmação antes de pagar.</p>
+   <p class="zc-booking-warning">Os dias verdes são compatíveis com a escala da Zion, <strong>mas não são reservas confirmadas</strong>. Depois de preencher os dados e aceitar os termos, o WhatsApp abrirá com a solicitação pronta. Toque em <strong>Enviar</strong> na conversa e aguarde a confirmação da Zion Cine antes de pagar.</p>
    <section class="zc-contract-form" aria-label="Identificação do contratante">
     <h4>Seus dados</h4>
     <label>Nome completo <input id="zc-client-name" type="text" autocomplete="name" maxlength="120" placeholder="Seu nome completo" required></label>
     <label>E-mail <input id="zc-client-email" type="email" autocomplete="email" maxlength="200" placeholder="voce@exemplo.com" required></label>
     <div class="zc-form-row"><label>WhatsApp com DDD <input id="zc-client-phone" type="tel" autocomplete="tel" maxlength="25" placeholder="(11) 99999-9999" required></label>
     <label>Horário desejado <input id="zc-client-time" type="time" required></label></div>
-    <small>O horário ainda depende da confirmação da Zion Cine. O envio automático de e-mail será integrado depois.</small>
+    <small>O horário é uma preferência e depende da confirmação da Zion Cine. O contato e o envio da solicitação serão feitos diretamente pelo WhatsApp.</small>
    </section>
    <section class="zc-contract-form" aria-label="Aceite do contrato">
     <p class="mono" style="color:#ffad76">CONTRATO DE PRESTAÇÃO DE SERVIÇOS FOTOGRÁFICOS · MINUTA V1.0</p>
@@ -469,7 +470,7 @@ body.zc-booking-open{overflow:hidden}
       <p><b>4. Valor.</b> O preço anunciado cobre o pacote e o deslocamento previsto para Bragança Paulista/SP. Outras cidades, taxas de entrada, locação, ingressos e serviços extras exigem orçamento específico antes do pagamento.</p>
       <p><b>5. Cancelamento e reagendamento.</b> Acordos de remarcação e eventual reembolso serão tratados antes da compra e observarão a legislação de defesa do consumidor, inclusive o direito de arrependimento quando aplicável. Nenhum direito legal do cliente será afastado.</p>
       <p><b>6. Uso de imagem.</b> As fotos não serão publicadas em redes sociais ou material promocional apenas por haver contratação. O uso depende de autorização opcional, separada e adequada, inclusive quanto a menores de idade.</p>
-      <p><b>7. Contato e dados.</b> Dados informados servem à solicitação de contratação e ao atendimento. Nesta versão do site o aceite não é salvo em servidor e não há envio automático de e-mail. Ao enviar o resumo preparado no WhatsApp, o cliente pode deixar um registro da solicitação e do aceite.</p>
+      <p><b>7. Contato e dados.</b> Os dados informados serão incluídos em uma mensagem preparada pelo site para envio voluntário pelo WhatsApp à Zion Cine. O site não envia mensagens automaticamente nem armazena os dados ou o aceite em servidor. O cliente precisa tocar em “Enviar” no WhatsApp para encaminhar a solicitação.</p>
       <p><b>8. Complementação.</b> Esta é uma minuta: os dados legais da Zion Cine e o prazo de entrega, condições de revisão e identificação completa do contratante precisam constar da versão definitiva aprovada antes de disponibilizar o processo automatizado ao público.</p>
      </div>
     </details>
@@ -478,10 +479,10 @@ body.zc-booking-open{overflow:hidden}
     <button id="zc-contract-accept" class="zc-contract-accept" type="button" disabled>EU ACEITO O CONTRATO ✓</button>
     <p id="zc-accept-status" class="zc-accept-status" role="status" aria-live="polite">Preencha seus dados e marque a caixa de concordância para aceitar.</p>
    </section>
-   <a class="zc-booking-whatsapp" id="zc-booking-whatsapp" href="#zc-booking-next" aria-disabled="true" target="_blank" rel="noopener noreferrer">1. Enviar a solicitação e confirmar pelo WhatsApp ↗</a>
+   <a class="zc-booking-whatsapp" id="zc-booking-whatsapp" href="#zc-booking-next" aria-disabled="true" target="_blank" rel="noopener noreferrer">Abrir WhatsApp com minha solicitação ↗</a>
    <label class="zc-booking-check"><input id="zc-booking-confirmed" type="checkbox"> <span>A Zion Cine já confirmou minha data e o valor no WhatsApp.</span></label>
    <a class="zc-booking-pay" id="zc-booking-pay" href="#zc-booking-next" aria-disabled="true">2. Ir para o pagamento seguro ↗</a>
-   <p class="zc-booking-final" id="zc-booking-final">A reserva depende de confirmação da Zion Cine, não apenas do pagamento.</p>
+   <p class="zc-booking-final" id="zc-booking-final">O WhatsApp abrirá com os dados preenchidos. Toque em Enviar para encaminhar a solicitação. A data só estará reservada após confirmação expressa da Zion Cine.</p>
   </div>
  </div>
 </div>
@@ -655,7 +656,7 @@ function syncBooking(){
  acceptButton.disabled=!infoOK||!agree.checked||accepted;
  acceptButton.classList.toggle('is-accepted',accepted);
  acceptButton.textContent=accepted?'✓ CONTRATO ACEITO':'EU ACEITO O CONTRATO ✓';
- acceptStatus.textContent=accepted?'Aceite concluído nesta etapa. Envie a mensagem no WhatsApp para deixar um registro do pedido e do aceite (ainda não armazenados em servidor).':'Preencha os dados, leia o contrato e marque a caixa para habilitar o botão de aceite.';
+ acceptStatus.textContent=accepted?'Termos aceitos nesta etapa. Toque no botão abaixo para abrir o WhatsApp com os dados e o aceite; depois, toque em Enviar na conversa. O site não armazena o aceite em servidor.':'Preencha os dados, leia o contrato e marque a caixa para habilitar o botão de aceite.';
  const canRequest=accepted&&agree.checked&&infoOK;
  const message=[
  'Olá, Zion Cine! Gostaria de solicitar este ensaio:',
@@ -678,7 +679,7 @@ function syncBooking(){
  pay.setAttribute('aria-disabled',String(!canPay));
  pay.textContent=city.included?'2. Ir para o pagamento seguro ↗':'Pagamento após orçamento personalizado';
  if(canPay){pay.target='_blank';pay.rel='noopener noreferrer'}else{pay.removeAttribute('target');pay.removeAttribute('rel')}
- $('zc-booking-final').textContent=city.included?'O Mercado Pago processa o pagamento; a reserva depende de confirmação pela Zion Cine. Nesta versão ainda não há envio automático de e-mails.':'Combine a taxa de deslocamento com a Zion Cine antes de receber o link de pagamento com o valor correto.';
+ $('zc-booking-final').textContent=city.included?'O WhatsApp abrirá com a solicitação pronta. Toque em Enviar para encaminhá-la à Zion Cine. A reserva depende de confirmação expressa antes do pagamento.':'Envie a solicitação pelo WhatsApp para combinar a taxa de deslocamento e confirmar o valor final antes de pagar.';
  confirmed.closest('label').hidden=!city.included;
 }
 function openModal(pack){activePack=pack;lastFocus=document.activeElement;cancelAccept();modal.hidden=false;document.body.classList.add('zc-booking-open');syncBooking();renderAll();$('zc-booking-close').focus()}
