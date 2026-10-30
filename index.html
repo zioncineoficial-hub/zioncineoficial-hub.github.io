@@ -287,6 +287,30 @@ a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-hi
 .zc-booking-final{color:#bfb1ad;font-size:11px;line-height:1.5;margin:8px 0 0}
 body.zc-booking-open{overflow:hidden}
 @media(max-width:760px){.zc-agenda{grid-template-columns:1fr;padding:23px 19px;gap:20px}.zc-calendar{padding:15px 12px}.zc-days,.zc-weekdays{gap:4px}.zc-booking-panel{padding:22px 16px 20px}.zc-day{border-radius:8px}}
+
+/* Zion V15 - Contrato e dados */
+.zc-booking-panel{width:min(540px,100%)}
+.zc-contract-form{padding:17px;margin:15px 0;background:#160f11;border:1px solid #ffffff26;border-radius:13px}
+.zc-contract-form h4{font-size:16px;font-weight:700;margin:0 0 12px;color:#fff}
+.zc-contract-form>label,.zc-form-row label{display:grid;gap:5px;margin:10px 0;font-size:11px;font-weight:650;color:#eee0d9}
+.zc-contract-form input:not([type="checkbox"]){padding:10px 12px;border:1px solid #ffffff44;border-radius:8px;min-height:42px;background:#292122;color:#fff;width:100%;font-size:13px;color-scheme:dark}
+.zc-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.zc-contract-form small{display:block;color:#b9aaa4;font-size:11px;line-height:1.6;margin-top:9px}
+.zc-contract-summary{color:#efdbd2;font-size:12px;line-height:1.7;margin:5px 0 12px}
+.zc-contract-details{border:1px solid #ffffff2c;background:#271e20;border-radius:10px;margin:12px 0}
+.zc-contract-details summary{cursor:pointer;padding:12px;color:#ffbd93;font-size:12px;font-weight:750}
+.zc-contract-details[open] summary{border-bottom:1px solid #ffffff22}
+.zc-contract-copy{padding:5px 14px 8px;max-height:240px;overflow-y:auto;color:#e6d8d2;font-size:11px;line-height:1.8}
+.zc-contract-copy p{margin:10px 0 14px}
+.zc-contract-form .zc-booking-check{display:flex;font-size:12px;line-height:1.55;align-items:flex-start;gap:9px;margin:14px 0;cursor:pointer}
+.zc-contract-form .zc-booking-check input{flex:0 0 19px;margin-top:2px}
+.zc-optin{color:#c1b6b1!important;font-weight:400!important}
+.zc-contract-accept{min-height:47px;width:100%;border-radius:10px;background:#ff6d29;color:#20100a;font-size:13px;font-weight:800;border:0}
+.zc-contract-accept:disabled{opacity:.4;filter:grayscale(.65)}
+.zc-contract-accept.is-accepted{background:#277950;color:#fff}
+.zc-accept-status{color:#c0b2ab;font-size:11px;line-height:1.55;margin:9px 0 0}
+.zc-booking-whatsapp[aria-disabled="true"]{pointer-events:none;opacity:.4;filter:grayscale(.7)}
+@media(max-width:420px){.zc-form-row{grid-template-columns:1fr}.zc-contract-form{padding:13px}}
 </style>
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 </head>
@@ -425,10 +449,39 @@ body.zc-booking-open{overflow:hidden}
   <p class="zc-booking-selected" id="zc-booking-selected" aria-live="polite">Selecione um dia em verde.</p>
   <div class="zc-booking-next" id="zc-booking-next" hidden>
    <p class="zc-booking-warning">Os dias verdes são compatíveis com a escala da Zion, <strong>não são reservas confirmadas</strong>. Envie a data pelo WhatsApp e aguarde a confirmação antes de pagar.</p>
-   <a class="zc-booking-whatsapp" id="zc-booking-whatsapp" href="https://wa.me/5511940872423" target="_blank" rel="noopener noreferrer">1. Solicitar e confirmar data no WhatsApp ↗</a>
-   <label class="zc-booking-check"><input id="zc-booking-confirmed" type="checkbox"> <span>A Zion Cine já confirmou minha data e o valor.</span></label>
+   <section class="zc-contract-form" aria-label="Identificação do contratante">
+    <h4>Seus dados</h4>
+    <label>Nome completo <input id="zc-client-name" type="text" autocomplete="name" maxlength="120" placeholder="Seu nome completo" required></label>
+    <label>E-mail <input id="zc-client-email" type="email" autocomplete="email" maxlength="200" placeholder="voce@exemplo.com" required></label>
+    <div class="zc-form-row"><label>WhatsApp com DDD <input id="zc-client-phone" type="tel" autocomplete="tel" maxlength="25" placeholder="(11) 99999-9999" required></label>
+    <label>Horário desejado <input id="zc-client-time" type="time" required></label></div>
+    <small>O horário ainda depende da confirmação da Zion Cine. O envio automático de e-mail será integrado depois.</small>
+   </section>
+   <section class="zc-contract-form" aria-label="Aceite do contrato">
+    <p class="mono" style="color:#ffad76">CONTRATO DE PRESTAÇÃO DE SERVIÇOS FOTOGRÁFICOS · MINUTA V1.0</p>
+    <h4>Contrato Zion Cine</h4>
+    <p id="zc-contract-summary" class="zc-contract-summary"></p>
+    <details id="zc-contract-details" class="zc-contract-details"><summary>Toque para ler o contrato completo ↗</summary>
+     <div class="zc-contract-copy">
+      <p><b>1. Objeto.</b> Contratação de ensaio fotográfico digital pela Zion Cine, conforme o pacote selecionado e os detalhes apresentados no resumo. O contrato definitivo deverá identificar legalmente o prestador e o contratante.</p>
+      <p><b>2. Entrega.</b> A quantidade de fotografias digitais editadas, produções de roupa e locais é a anunciada no pacote escolhido. A entrega será por galeria digital ou Google Drive, em prazo previamente acordado por escrito. Fotos extras, revisões e arquivos originais exigem acordo separado.</p>
+      <p><b>3. Agenda.</b> A data e o horário escolhidos são solicitações. A contratação de uma data depende de confirmação expressa pela Zion Cine. Dias com turno 00h–08h podem permitir atendimento após as 08h, conforme combinação.</p>
+      <p><b>4. Valor.</b> O preço anunciado cobre o pacote e o deslocamento previsto para Bragança Paulista/SP. Outras cidades, taxas de entrada, locação, ingressos e serviços extras exigem orçamento específico antes do pagamento.</p>
+      <p><b>5. Cancelamento e reagendamento.</b> Acordos de remarcação e eventual reembolso serão tratados antes da compra e observarão a legislação de defesa do consumidor, inclusive o direito de arrependimento quando aplicável. Nenhum direito legal do cliente será afastado.</p>
+      <p><b>6. Uso de imagem.</b> As fotos não serão publicadas em redes sociais ou material promocional apenas por haver contratação. O uso depende de autorização opcional, separada e adequada, inclusive quanto a menores de idade.</p>
+      <p><b>7. Contato e dados.</b> Dados informados servem à solicitação de contratação e ao atendimento. Nesta versão do site o aceite não é salvo em servidor e não há envio automático de e-mail. Ao enviar o resumo preparado no WhatsApp, o cliente pode deixar um registro da solicitação e do aceite.</p>
+      <p><b>8. Complementação.</b> Esta é uma minuta: os dados legais da Zion Cine e o prazo de entrega, condições de revisão e identificação completa do contratante precisam constar da versão definitiva aprovada antes de disponibilizar o processo automatizado ao público.</p>
+     </div>
+    </details>
+    <label class="zc-booking-check"><input id="zc-booking-agree" type="checkbox"> <span>Li e concordo com o Contrato de Prestação de Serviços Fotográficos, incluindo meu pacote, valor, entrega e regras de cancelamento.</span></label>
+    <label class="zc-booking-check zc-optin"><input id="zc-image-consent" type="checkbox"> <span>Autorizo a divulgação das fotos no portfólio e redes sociais da Zion Cine (opcional).</span></label>
+    <button id="zc-contract-accept" class="zc-contract-accept" type="button" disabled>EU ACEITO O CONTRATO ✓</button>
+    <p id="zc-accept-status" class="zc-accept-status" role="status" aria-live="polite">Preencha seus dados e marque a caixa de concordância para aceitar.</p>
+   </section>
+   <a class="zc-booking-whatsapp" id="zc-booking-whatsapp" href="#zc-booking-next" aria-disabled="true" target="_blank" rel="noopener noreferrer">1. Enviar a solicitação e confirmar pelo WhatsApp ↗</a>
+   <label class="zc-booking-check"><input id="zc-booking-confirmed" type="checkbox"> <span>A Zion Cine já confirmou minha data e o valor no WhatsApp.</span></label>
    <a class="zc-booking-pay" id="zc-booking-pay" href="#zc-booking-next" aria-disabled="true">2. Ir para o pagamento seguro ↗</a>
-   <p class="zc-booking-final" id="zc-booking-final">A contratação e o agendamento serão finalizados diretamente com a equipe Zion Cine.</p>
+   <p class="zc-booking-final" id="zc-booking-final">A reserva depende de confirmação da Zion Cine, não apenas do pagamento.</p>
   </div>
  </div>
 </div>
@@ -517,7 +570,7 @@ body.zc-booking-open{overflow:hidden}
  lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});lightbox.addEventListener('touchstart',e=>{originY=e.touches[0].clientX},{passive:true});lightbox.addEventListener('touchend',e=>{const delta=e.changedTouches[0].clientX-originY;if(Math.abs(delta)>55)changeImage(delta<0?1:-1)},{passive:true});
 })();
 
-/* ZION CINE V14 — disponibilidade da Turma C / pré-agendamento sem backend */
+/* ZION CINE V15 — Turma C / aceite obrigatório na pré-contratação; sem backend */
 (function(){
 'use strict';
 const shifts={"2026-10-16":"Folga","2026-10-17":"00h–08h","2026-10-18":"00h–08h","2026-10-19":"08h–16h","2026-10-20":"16h–00h","2026-10-21":"16h–00h","2026-10-22":"Folga","2026-10-23":"Folga","2026-10-24":"Folga","2026-10-25":"00h–08h","2026-10-26":"00h–08h","2026-10-27":"08h–16h","2026-10-28":"08h–16h","2026-10-29":"16h–00h","2026-10-30":"Folga","2026-10-31":"Folga","2026-11-01":"Folga","2026-11-02":"Folga","2026-11-03":"00h–08h","2026-11-04":"08h–16h","2026-11-05":"08h–16h","2026-11-06":"16h–00h","2026-11-07":"16h–00h","2026-11-08":"Folga","2026-11-09":"Folga","2026-11-10":"Folga","2026-11-11":"00h–08h","2026-11-12":"00h–08h","2026-11-13":"08h–16h","2026-11-14":"16h–00h","2026-11-15":"16h–00h","2026-11-16":"Folga","2026-11-17":"Folga","2026-11-18":"Folga","2026-11-19":"00h–08h","2026-11-20":"00h–08h","2026-11-21":"08h–16h","2026-11-22":"08h–16h","2026-11-23":"16h–00h","2026-11-24":"Folga","2026-11-25":"Folga","2026-11-26":"Folga","2026-11-27":"Folga","2026-11-28":"00h–08h","2026-11-29":"08h–16h","2026-11-30":"08h–16h","2026-12-01":"16h–00h","2026-12-02":"16h–00h","2026-12-03":"Folga","2026-12-04":"Folga","2026-12-05":"Folga","2026-12-06":"00h–08h","2026-12-07":"00h–08h","2026-12-08":"08h–16h","2026-12-09":"16h–00h","2026-12-10":"16h–00h","2026-12-11":"Folga","2026-12-12":"Folga","2026-12-13":"Folga","2026-12-14":"00h–08h","2026-12-15":"00h–08h","2026-12-16":"08h–16h","2026-12-17":"08h–16h","2026-12-18":"16h–00h","2026-12-19":"Folga","2026-12-20":"Folga","2026-12-21":"Folga","2026-12-22":"Folga","2026-12-23":"00h–08h","2026-12-24":"08h–16h","2026-12-25":"08h–16h","2026-12-26":"16h–00h","2026-12-27":"16h–00h","2026-12-28":"Folga","2026-12-29":"Folga","2026-12-30":"Folga","2026-12-31":"00h–08h"};
@@ -534,10 +587,17 @@ const cities={
  pinhalzinho:{name:'Pinhalzinho',query:'Pinhalzinho, SP'},
  outras:{name:'outra cidade próxima de Bragança Paulista',query:'Região de Bragança Paulista, SP'}
 };
-const packs={basic:{name:'Zion Basic',price:'R$ 299,90',url:'https://mpago.la/1kTQy1V'},plus:{name:'Zion Plus',price:'R$ 499,90',url:'https://mpago.la/2B1kiRT'},premium:{name:'Zion Premium',price:'R$ 749,90',url:'https://mpago.la/2AZw3Ta'}};
+const packs={basic:{name:'Zion Basic',price:'R$ 299,90',url:'https://mpago.la/1kTQy1V',pictures:20},plus:{name:'Zion Plus',price:'R$ 499,90',url:'https://mpago.la/2B1kiRT',pictures:40},premium:{name:'Zion Premium',price:'R$ 749,90',url:'https://mpago.la/2AZw3Ta',pictures:70}};
 const months=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const firstMonth=9,lastMonth=11,year=2026;
-let viewMonth=9,selected='',activePack='basic',lastFocus=null;
+let viewMonth=9,selected='',activePack='basic',lastFocus=null,accepted=false,acceptDate='';
+const fieldName=$('zc-client-name'),fieldEmail=$('zc-client-email'),fieldPhone=$('zc-client-phone'),fieldTime=$('zc-client-time');
+const agree=$('zc-booking-agree'),imageConsent=$('zc-image-consent'),acceptButton=$('zc-contract-accept'),acceptStatus=$('zc-accept-status');
+const contractVersion='ZION-V1.0-20261017';
+function normalized(value){return String(value||'').trim().replace(/\s+/g,' ')}
+function fieldsValid(){return normalized(fieldName.value).length>=3&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized(fieldEmail.value))&&normalized(fieldPhone.value).replace(/\D/g,'').length>=10&&/^([01]\d|2[0-3]):[0-5]\d$/.test(fieldTime.value)}
+function cancelAccept(){accepted=false;acceptDate='';agree.checked=false;confirmed.checked=false}
+
 const modal=$('zc-booking-modal'),confirmed=$('zc-booking-confirmed'),pay=$('zc-booking-pay'),wa=$('zc-booking-whatsapp'),next=$('zc-booking-next');
 function todayBR(){
  const parts=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'2-digit',day:'2-digit',timeZone:'America/Sao_Paulo'}).formatToParts(new Date());
@@ -564,7 +624,7 @@ function renderOne(gridID,titleID,prevID,nextID){
   const num=document.createElement('span');num.textContent=d;
   const mark=document.createElement('span');mark.className='zc-day-mark';mark.setAttribute('aria-hidden','true');mark.textContent=available?'✓':'×';
   button.append(num,mark);
-  if(available)button.addEventListener('click',()=>{selected=date;confirmed.checked=false;renderAll();syncBooking()});
+  if(available)button.addEventListener('click',()=>{selected=date;cancelAccept();renderAll();syncBooking()});
   grid.appendChild(button);
  }
 }
@@ -581,34 +641,64 @@ function updateCity(){
  note.textContent=city.included?'Bragança Paulista: preço anunciado, sem taxa de deslocamento. Selecione uma data verde e aguarde confirmação da Zion antes de pagar.':city.name+': deslocamento sujeito a orçamento. Selecione uma data verde e consulte o valor total antes de pagar.';
  cityButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.city===select.value)));
  ctas.forEach(a=>{a.href='#zc-agenda';a.removeAttribute('target');a.querySelector('.zc-arrow').textContent='↗';a.childNodes[0].textContent=city.included?'Escolher data e contratar ':'Consultar data e deslocamento ';});
- confirmed.checked=false;syncBooking();
+ cancelAccept();syncBooking();
 }
 function syncBooking(){
  if(!modal)return;
  const city=cities[select.value]||cities.braganca,pack=packs[activePack];
- const valid=selected&&isAvailable(selected);
+ const valid=Boolean(selected&&isAvailable(selected)),infoOK=fieldsValid();
  $('zc-booking-package').textContent=pack.name+' — '+pack.price+' · '+city.name+' · escolha a data para sua solicitação.';
  $('zc-booking-selected').textContent=valid?'Sua data pretendida: '+pretty(selected)+(shifts[selected]==='00h–08h'?' (atendimento após as 08h)':' (folga)'):'Selecione um dia em verde.';
+ $('zc-contract-summary').textContent=pack.name+' · '+pack.pictures+' fotografias editadas · '+pack.price+' · '+(valid?pretty(selected):'selecione a data')+' · '+city.name+' · '+(fieldTime.value||'horário a definir');
  next.hidden=!valid;
- if(!valid){confirmed.checked=false;return}
- const message='Olá, Zion Cine! Quero contratar o '+pack.name+' ('+pack.price+'). Gostaria do dia '+pretty(selected)+', em '+city.name+'. '+(city.included?'Pode confirmar se a data está disponível antes de eu pagar?':'Pode informar a taxa de deslocamento e confirmar a data antes do pagamento?');
- wa.href='https://wa.me/'+contact+'?text='+encodeURIComponent(message);
- const canPay=Boolean(city.included&&confirmed.checked&&valid);
+ if(!valid){cancelAccept();return}
+ acceptButton.disabled=!infoOK||!agree.checked||accepted;
+ acceptButton.classList.toggle('is-accepted',accepted);
+ acceptButton.textContent=accepted?'✓ CONTRATO ACEITO':'EU ACEITO O CONTRATO ✓';
+ acceptStatus.textContent=accepted?'Aceite concluído nesta etapa. Envie a mensagem no WhatsApp para deixar um registro do pedido e do aceite (ainda não armazenados em servidor).':'Preencha os dados, leia o contrato e marque a caixa para habilitar o botão de aceite.';
+ const canRequest=accepted&&agree.checked&&infoOK;
+ const message=[
+ 'Olá, Zion Cine! Gostaria de solicitar este ensaio:',
+ 'Nome: '+normalized(fieldName.value),
+ 'E-mail: '+normalized(fieldEmail.value),
+ 'WhatsApp: '+normalized(fieldPhone.value),
+ 'Pacote: '+pack.name+' ('+pack.pictures+' fotos editadas) – '+pack.price,
+ 'Data pretendida: '+pretty(selected),
+ 'Horário pretendido: '+fieldTime.value,
+ 'Cidade: '+city.name,
+ city.included?'Sem taxa de deslocamento adicional em Bragança Paulista.':'Peço orçamento de deslocamento antes do pagamento.',
+ 'Declaro que li e aceitei os termos '+contractVersion+' em '+(acceptDate||'—')+' (horário de Brasília).',
+ 'Autorização opcional de uso de imagem: '+(imageConsent.checked?'SIM':'NÃO')+'.',
+ 'Solicito confirmação da data e do valor final, além do prazo de entrega por escrito.'
+ ].join('\n');
+ wa.href=canRequest?'https://wa.me/'+contact+'?text='+encodeURIComponent(message):'#zc-booking-next';
+ wa.setAttribute('aria-disabled',String(!canRequest));
+ const canPay=Boolean(city.included&&confirmed.checked&&valid&&canRequest);
  pay.href=canPay?pack.url:'#zc-booking-next';
  pay.setAttribute('aria-disabled',String(!canPay));
  pay.textContent=city.included?'2. Ir para o pagamento seguro ↗':'Pagamento após orçamento personalizado';
  if(canPay){pay.target='_blank';pay.rel='noopener noreferrer'}else{pay.removeAttribute('target');pay.removeAttribute('rel')}
- $('zc-booking-final').textContent=city.included?'O Mercado Pago processa seu pagamento; a data só fica reservada quando confirmada pela equipe Zion.':'Para esta cidade, combine o valor final com a Zion Cine. Não pague o preço-base antes do orçamento.';
- const check=confirmed.closest('label');check.hidden=!city.included;
+ $('zc-booking-final').textContent=city.included?'O Mercado Pago processa o pagamento; a reserva depende de confirmação pela Zion Cine. Nesta versão ainda não há envio automático de e-mails.':'Combine a taxa de deslocamento com a Zion Cine antes de receber o link de pagamento com o valor correto.';
+ confirmed.closest('label').hidden=!city.included;
 }
-function openModal(pack){activePack=pack;lastFocus=document.activeElement;confirmed.checked=false;modal.hidden=false;document.body.classList.add('zc-booking-open');syncBooking();renderAll();$('zc-booking-close').focus()}
+function openModal(pack){activePack=pack;lastFocus=document.activeElement;cancelAccept();modal.hidden=false;document.body.classList.add('zc-booking-open');syncBooking();renderAll();$('zc-booking-close').focus()}
 function closeModal(){modal.hidden=true;document.body.classList.remove('zc-booking-open');if(lastFocus&&lastFocus.focus)lastFocus.focus()}
 ctas.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openModal(a.dataset.package)}));
 $('zc-booking-close').addEventListener('click',closeModal);
 modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
 document.addEventListener('keydown',e=>{if(!modal.hidden&&e.key==='Escape'){closeModal();e.stopPropagation()}});
 confirmed.addEventListener('change',syncBooking);
-pay.addEventListener('click',e=>{if(pay.getAttribute('aria-disabled')==='true')e.preventDefault()});
+for(const field of [fieldName,fieldEmail,fieldPhone,fieldTime])field.addEventListener('input',()=>{cancelAccept();syncBooking()});
+agree.addEventListener('change',()=>{if(!agree.checked){accepted=false;acceptDate='';confirmed.checked=false}syncBooking()});
+imageConsent.addEventListener('change',()=>{if(accepted)cancelAccept();syncBooking()});
+acceptButton.addEventListener('click',()=>{
+ if(accepted||!agree.checked||!fieldsValid()||!selected||!isAvailable(selected))return;
+ accepted=true;
+ acceptDate=new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'medium',timeZone:'America/Sao_Paulo'}).format(new Date());
+ syncBooking();
+});
+wa.addEventListener('click',e=>{if(wa.getAttribute('aria-disabled')==='true'||!accepted||!fieldsValid())e.preventDefault()});
+pay.addEventListener('click',e=>{if(pay.getAttribute('aria-disabled')==='true'||!accepted||!agree.checked||!fieldsValid()||!confirmed.checked)e.preventDefault()});
 select.addEventListener('change',updateCity);
 cityButtons.forEach(b=>b.addEventListener('click',()=>{select.value=b.dataset.city;updateCity()}));
 renderAll();updateCity();
